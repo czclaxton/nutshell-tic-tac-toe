@@ -1,0 +1,122 @@
+.board-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-bottom: 1rem;
+}
+
+.board-square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 56px;
+  font-weight: bold;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  padding: 0;
+  text-align: center;
+}
+
+.board-square:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.board-square:nth-child(1),
+.board-square:nth-child(2),
+.board-square:nth-child(3) {
+  border-top: none;
+}
+
+.board-square:nth-child(3n) {
+  border-right: none;
+}
+
+.board-square:nth-child(7),
+.board-square:nth-child(8),
+.board-square:nth-child(9) {
+  border-bottom: none;
+}
+
+.board-square:focus {
+  position: relative;
+}
+
+.game {
+  font-family: sans-serif;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.game.game--winner .square:focus {
+  outline: none;
+}
+
+.message {
+  text-align: center;
+}
+
+.announcement {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.announcement h1 {
+  margin: 0.75rem 0;
+}
+
+.announcement div {
+  margin-bottom: 0.75rem;
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem 0 0;
+  min-width: 5rem;
+  text-decoration: none;
+  background: #0069ed;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+.button:last-of-type {
+  margin-right: 0;
+}
+
+.button:hover,
+.button:focus {
+  background: #0053ba;
+}
+
+.button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.button:active {
+  transform: scale(0.99);
+}

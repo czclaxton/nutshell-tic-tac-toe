@@ -1,6 +1,4 @@
-import "./Announcement.scss";
-import sass from "sass";
-sass.compile("Announcement.scss");
+import React from "react";
 
 const Announcement = ({ winner, onStart }) => (
   <div className="announcement">
@@ -8,11 +6,13 @@ const Announcement = ({ winner, onStart }) => (
       <div>Tie Game</div>
     ) : (
       <div>
-        <div>Congratulations,</div>
+        <div>Congratulations! The winner is: </div>
         <h1>{winner}</h1>
       </div>
     )}
-    <button className="button" onClick={onStart}></button>
+    <button className="button" onClick={onStart}>
+      Reset
+    </button>
   </div>
 );
 

@@ -1,37 +1,34 @@
-import { useState } from "react";
-import { getWinner } from "./utils";
+import React, { useReducer, useCallback } from "react";
 import classNames from "classnames";
 import Board from "./components/Board/Board";
 import Message from "./components/Message/Message";
 import Announcement from "./components/Announcement/Announcement";
-import "./App.scss";
+import { onSquareClickReducer, initialState } from "./utils";
 
 const App = () => {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = useState(true);
-  const [winner, setWinner] = useState("");
+  const [{ board, isXNext, winner }, dispatch] = useReducer(
+    onSquareClickReducer,
+    initialState
+  );
 
-  const onClick = (i) => {
-    const movesList = [...board];
-    movesList[i] = isXNext ? "X" : "O";
-    setBoard(movesList);
-    setIsXNext(!isXNext);
+  const onClick = useCallback(
+    (index) => {
+      dispatch({ type: "click", index });
+    },
+    [dispatch]
+  );
 
-    const winner = getWinner(movesList);
-
-    winner && setWinner(winner);
-  };
-
-  const onStart = () => {
-    setBoard(Array(9).fill(null));
-    setWinner(null);
-  };
+  const onStart = useCallback(() => {
+    dispatch({ type: "start" });
+  }, [dispatch]);
 
   return (
-    <div className={classNames("Game", { "Game--winner": !!winner })}>
-      <Board board={board} onClick={onClick} />
-      <Message isStarted={board.some((s) => s)} isXNext={isXNext} />
-      {!!winner && <Announcement winner={winner} onStart={onStart} />}
+    <div className="board-container">
+      <div className={classNames("game", { "game--winner": !!winner })}>
+        <Board board={board} onClick={onClick} />
+        <Message isStarted={board.some((s) => s)} isXNext={isXNext} />
+        {!!winner && <Announcement winner={winner} onStart={onStart} />}
+      </div>
     </div>
   );
 };

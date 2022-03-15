@@ -21,3 +21,32 @@ export const getWinner = (board) => {
 
   return winner;
 };
+
+export const initialState = {
+  board: Array(9).fill(null),
+  isXNext: true,
+  winner: "",
+};
+
+export const onSquareClickReducer = (state, action) => {
+  switch (action.type) {
+    case "start":
+      return initialState;
+    case "click":
+      const movesList = [...state.board];
+
+      if (movesList[action.index] === null) {
+        movesList[action.index] = state.isXNext ? "X" : "O";
+
+        return {
+          board: movesList,
+          isXNext: !state.isXNext,
+          winner: getWinner(movesList),
+        };
+      }
+
+      return state;
+    default:
+      return state;
+  }
+};

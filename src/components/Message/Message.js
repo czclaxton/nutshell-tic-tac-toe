@@ -1,10 +1,12 @@
-import "./Message.scss";
-import sass from "sass";
-sass.compile("Message.scss");
+import React from "react";
 
 const Message = ({ isStarted, isXNext }) => (
   <div className="message">
-    {isStarted ? (isXNext ? "X's turn" : "O's turn") : "Click to begin"}
+    {isStarted
+      ? isXNext
+        ? "X's turn"
+        : "O's turn"
+      : "Click on a square to begin"}
   </div>
 );
 
