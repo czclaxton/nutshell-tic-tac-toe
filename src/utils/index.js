@@ -28,6 +28,7 @@ export const initialState = {
   board: Array(9).fill(null),
   isXNext: true,
   winner: "",
+  prevIdx: null,
 };
 
 export const onSquareClickReducer = (state, action) => {
@@ -44,9 +45,26 @@ export const onSquareClickReducer = (state, action) => {
           board: movesList,
           isXNext: !state.isXNext,
           winner: getWinner(movesList),
+          prevIdx: action.index,
         };
       }
       return state;
+    case "undo":
+      const board = [...state.board];
+
+      if (!action.index) {
+        return state;
+      }
+
+      board[action.index] = null;
+
+      return {
+        board,
+        isXNext: !state.isXNext,
+        winner: "",
+        prevIdx: null,
+      };
+
     default:
       return state;
   }

@@ -6,7 +6,7 @@ import Announcement from "./components/Announcement/Announcement";
 import { onSquareClickReducer, initialState } from "./utils";
 
 const App = () => {
-  const [{ board, isXNext, winner }, dispatch] = useReducer(
+  const [{ board, isXNext, winner, prevIdx }, dispatch] = useReducer(
     onSquareClickReducer,
     initialState
   );
@@ -18,6 +18,10 @@ const App = () => {
     [dispatch]
   );
 
+  const onUndoClick = useCallback(() => {
+    dispatch({ type: "undo", index: prevIdx });
+  }, [prevIdx, dispatch]);
+
   const onStart = useCallback(() => {
     dispatch({ type: "start" });
   }, [dispatch]);
@@ -27,6 +31,9 @@ const App = () => {
       <div className={classNames("game", { "game--winner": !!winner })}>
         <Board board={board} onClick={onClick} />
         <Message isStarted={board.some((s) => s)} isXNext={isXNext} />
+        <button className="button button-undo" onClick={onUndoClick}>
+          Undo
+        </button>
         {!!winner && <Announcement winner={winner} onStart={onStart} />}
       </div>
     </div>
