@@ -1,3 +1,5 @@
+## npm start or yarn start to run locally
+
 #### **1. What's your proudest achievement? It can be from work, a side project, or something unrelated to tech. We're interested in knowing about what you think is noteworthy and motivating.**
 
 <br>
