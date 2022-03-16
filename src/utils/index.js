@@ -11,12 +11,14 @@ export const getWinner = (board) => {
   ];
 
   let winner = possibilities.reduce((memo, [x, y, z]) => {
+    // Checks for a winning combination of tiles
     if (board[x] && board[x] === board[y] && board[y] === board[z])
       memo = board[x];
 
     return memo;
   }, "");
 
+  // If no winner and if all tiles have a non null value, it's a tie
   if (!winner && board.every((s) => s)) winner = "tie";
 
   return winner;
@@ -44,7 +46,6 @@ export const onSquareClickReducer = (state, action) => {
           winner: getWinner(movesList),
         };
       }
-
       return state;
     default:
       return state;

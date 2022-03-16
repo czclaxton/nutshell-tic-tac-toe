@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+#### **1. What's your proudest achievement? It can be from work, a side project, or something unrelated to tech. We're interested in knowing about what you think is noteworthy and motivating.**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+My proudest achievement is my work ethic. I pride myself in showing up on time, working hard, and always being open to learning new skills. I use exercises like this tic-tac-toe project to challenge myself with implementing a new technology or to improve in a particular area. In this case, I learned about optimizing my React code by utilizing the tools that React provides for things such as memoization or reducing re-renders with useCallback.
+<br>
+<br>
 
-## Available Scripts
+#### **2. Tell us about an interesting work-related book, article, or presentation that you saw recently. Tell us why, give us a recommendation, and sell us on it!**
 
-In the project directory, you can run:
+<br>
+I recently watched a presentation given by Philip Roberts at JSConf EU. He gave an engaging talk on the event loop and how it works. He took something complex and explained it in very simple terms. When working with JavaScript I think it's important to have a better understanding of terms that we hear all the time like non-blocking, callback, async, etc. 
+<br>
+<br>
 
-### `npm start`
+#### **3. From what you’ve seen on our web site, write about who Nutshell’s customers are, and what problems they’re looking to solve.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
+Nutshell caters towards any business or entity that is looking to improve and grow. These customers are looking to identify their problems, optimize work-flows, automate redundant tasks, and improve visibility with customer needs without adding unnecessary complexity.
+<br>
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### **4. Describe something that you do outside of work that's least similar to what you do at work.**
 
-### `npm test`
+<br>
+I am big fan of the sport of basketball so I spend a lot of my free time playing, watching the NBA, and keeping up on everything with things like podcasts or youtube.
+<br>
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### **5. Describe something you do at work that's furthest from your official description.**
 
-### `npm run build`
+<br>
+I worked on creating and maintaining documentation for a legacy Java/Groovy api. I was hired on to seamlessly migrate the service over to Node. While figuring out how the api worked (there was no existing documentation), I created thorough documentation using Open API Specification 3.0. With any subsequent updates to any endpoints or related parts, I made sure the documentation stayed in sync.  
+<br>
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### **6. Tell us about the last time you had to reconsider a closely-held opinion. What caused your change in thinking?**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+I used to prefer OOP as a paradigm due to the logical organization of data into entities because it was familiar and made sense to me in the most obvious of ways. After working with some experienced developers that strongly preferred a functional paradigm, i've changed my opinion to preferring FP because of the simplicity that it brings as the code scales due to the modularity of it as well as the ease of testing.
+<br>
+<br>
