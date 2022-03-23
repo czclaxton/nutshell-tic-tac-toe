@@ -6,6 +6,7 @@ import Announcement from "./components/Announcement/Announcement";
 import { onSquareClickReducer, initialState } from "./utils";
 
 const App = () => {
+  // userReducer over useState because of the deeply nested state tree as well as being able to pass down the dispatch fn
   const [{ board, isXNext, winner, prevIdx }, dispatch] = useReducer(
     onSquareClickReducer,
     initialState
